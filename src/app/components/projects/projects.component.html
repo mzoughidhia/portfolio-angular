@@ -1,0 +1,38 @@
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+      <div
+        class="project-card animate-in"
+        [class.featured]="project.featured"
+        *ngFor="let project of projects"
+        #cardEl
+        (mousemove)="onMouseMove($event, cardEl)"
+        (mouseleave)="onMouseLeave(cardEl)">
+        <div class="project-card-inner">
+          <div class="project-icon">
+            <i [class]="project.icon"></i>
+          </div>
+          <div class="project-badge" *ngIf="project.featured">Featured</div>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <div class="project-links">
+            <a [href]="project.githubUrl" class="project-link">
+              <i class="fab fa-github"></i> Code
+            </a>
+            <a [href]="project.demoUrl" class="project-link primary" *ngIf="project.demoUrl">
+              <i class="fas fa-external-link-alt"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

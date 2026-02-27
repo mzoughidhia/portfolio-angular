@@ -1,0 +1,30 @@
+<section class="section education" id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-title">Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item animate-in" *ngFor="let edu of educationList; let i = index" [class.right]="i % 2 !== 0">
+        <div class="timeline-dot">
+          <i [class]="edu.icon"></i>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>{{ edu.degree }}</h3>
+            <span class="timeline-date">{{ edu.period }}</span>
+          </div>
+          <p class="timeline-institution">
+            <i class="fas fa-university"></i>
+            {{ edu.institution }}
+          </p>
+          <p class="timeline-desc">{{ edu.description }}</p>
+          <div class="timeline-tags">
+            <span class="tag" *ngFor="let tag of edu.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

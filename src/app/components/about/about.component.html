@@ -1,0 +1,56 @@
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-content animate-in">
+      <div class="about-text">
+        <p class="about-description">
+          Young graduate in E-business, dynamic and motivated, with a solid academic background and transferable skills acquired through various internships and academic projects. Capable of quickly adapting to new work environments and collaborating effectively in a team. Eager to make a positive contribution to an innovative and growing organization.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item" *ngFor="let stat of stats">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+        <div class="about-info">
+          <div class="info-item" *ngFor="let item of info">
+            <i [class]="item.icon"></i>
+            <span>{{ item.text }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="code-card">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="code-filename">about.py</span>
+          </div>
+          <div class="code-body">
+            <pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-string">"Mohamed Dhia"</span>
+        self.role = <span class="code-string">"E-business Graduate"</span>
+        self.location = <span class="code-string">"Tunisia"</span>
+        self.skills = [
+            <span class="code-string">"Python"</span>, <span class="code-string">"Laravel"</span>,
+            <span class="code-string">"Angular"</span>, <span class="code-string">"AI/ML"</span>,
+            <span class="code-string">"SQL"</span>, <span class="code-string">"Java"</span>
+        ]
+        self.passion = <span class="code-string">"Building solutions"</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">get_status</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Open to opportunities"</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

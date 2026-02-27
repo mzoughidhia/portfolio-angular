@@ -1,0 +1,41 @@
+<section class="section skills" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-content">
+      <div class="skills-categories">
+        <div class="skill-category animate-in" *ngFor="let category of skillCategories">
+          <div class="skill-cat-header">
+            <i [class]="category.icon"></i>
+            <h3>{{ category.name }}</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" *ngFor="let skill of category.skills">
+              <div class="skill-info">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-percent">{{ skill.percentage }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" [attr.data-width]="skill.percentage"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-cloud animate-in">
+        <h3 class="tech-cloud-title">Technologies & Tools</h3>
+        <div class="tech-icons-grid">
+          <div class="tech-icon-item" *ngFor="let tech of techIcons">
+            <div class="tech-icon-wrapper" [style.color]="tech.color">
+              <i [class]="tech.icon"></i>
+            </div>
+            <span class="tech-icon-name">{{ tech.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">MDM</span>
+        <p class="footer-tagline">Building digital solutions with passion.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li *ngFor="let link of navLinks">
+            <a (click)="scrollToSection(link.href)">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>meddhiamzoughi48&#64;gmail.com</p>
+        <p>(+216) 92 83 62 36</p>
+        <div class="footer-social">
+          <a [href]="link.href" class="social-link" [title]="link.label" *ngFor="let link of socialLinks">
+            <i [class]="link.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} Mohamed Dhia Mzoughi. All rights reserved.</p>
+      <p class="footer-made">Made with <i class="fas fa-heart"></i> using Angular</p>
+    </div>
+  </div>
+</footer>
